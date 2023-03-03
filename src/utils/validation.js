@@ -7,7 +7,11 @@ function isEmailAddress(str) {
 }
 
 const signUpFormValidation = (formData) => {
-    const error = {}
+    const error = {
+        name : "",
+        email : "",
+        password : "",
+    }
     const fields = ['email','password','name']
     fields.forEach(field=>{
         if(!formData[`${field}`]){
